@@ -1,0 +1,18 @@
+---
+# tasks file for plesk-license
+- name: Install New license key
+  shell: /usr/sbin/plesk bin license -i  {{ license_key_virtual }}
+  when: inventory_hostname in groups['virtual']
+
+- name: Install New license key
+  shell: /usr/sbin/plesk bin license -i  {{ license_key_physical }}
+  when: inventory_hostname in groups['physical']
+
+- name: Setting default language to French 
+  shell: /usr/sbin/plesk bin locales --set-default fr-FR
+
+- name: setting provider view
+  shell: /usr/sbin/plesk bin poweruser --off
+  when: inventory_hostname in groups['provider_view']
+
+

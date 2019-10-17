@@ -1,0 +1,5 @@
+---
+# vars file for plesk-license
+
+- license_key_virtual : "A00500-A00500-A00500-A00500-A00500"
+- license_key_physical : "A00T00-A00T00-A00T00-A00T00-A00T00"
