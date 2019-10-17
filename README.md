@@ -22,16 +22,17 @@ Example Playbook
 ----------------
 
 Example of usage
-
+```yaml
   hosts: all
   vars:
     - license_key_virtual : "A00500-A00500-A00500-A00500-A00500"
     - license_key_physical : "A00T00-A00T00-A00T00-A00T00-A00T00"
   roles:
     - { role: plesk-license }
-  
+```
 
 Hosts groups are:
+```ini
 [virtual]
 
 
@@ -41,7 +42,7 @@ Hosts groups are:
 
 [provider_view]
 
-
+```
 License
 -------
 
